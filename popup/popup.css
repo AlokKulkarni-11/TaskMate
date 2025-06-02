@@ -1,0 +1,239 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #001f3f; /* Dark bluish background */
+  color: #bfa94f; /* Dark yellowish text */
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 480px;
+  transition: background-color 0.3s ease;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: rgba(0, 31, 63, 0.85);
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  transition: background-color 0.3s ease;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #d4c96f; /* lighter dark yellow */
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #bfa94f;
+  transition: color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  color: #e6d87f; /* lighter shade on hover */
+}
+
+.section {
+  margin-bottom: 16px;
+}
+
+.task-form input[type="text"],
+.task-form textarea,
+.task-form input[type="date"],
+.task-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #4a5568;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #002b5c;
+  color: #bfa94f;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.task-form input[type="text"]:focus,
+.task-form textarea:focus,
+.task-form input[type="date"]:focus,
+.task-form select:focus {
+  border-color: #e6d87f;
+  outline: none;
+  background-color: #001f3f;
+}
+
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.input-row input[type="date"],
+.input-row select {
+  flex: 1;
+  background-color: #001f3f; /* Match body background */
+  color: #bfa94f;
+  border: 1px solid #4a5568;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.input-row input[type="date"]:focus,
+.input-row select:focus {
+  background-color: #001f3f;
+  border-color: #e6d87f;
+  outline: none;
+}
+
+.btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  color: #bfa94f;
+}
+
+.btn-primary {
+  background-color: #003366;
+}
+
+.btn-primary:hover {
+  background-color: #004080;
+}
+
+.btn-success {
+  background-color: #1a4d1a;
+}
+
+.btn-success:hover {
+  background-color: #267326;
+}
+
+.btn-danger {
+  background-color: #662222;
+}
+
+.btn-danger:hover {
+  background-color: #8b2e2e;
+}
+
+.task-list-section {
+  max-height: 250px;
+  overflow-y: auto;
+  border: 1px solid #4a5568;
+  border-radius: 4px;
+  background-color: #002b5c;
+  padding: 8px;
+  transition: background-color 0.3s ease;
+  color: #bfa94f;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  border-bottom: 1px solid #4a5568;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #bfa94f;
+}
+
+.task-item:hover {
+  background-color: #003366;
+}
+
+.task-item.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-title {
+  font-weight: 600;
+}
+
+.task-right button {
+  background: none;
+  border: none;
+  color: #bfa94f;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 13px;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.task-right button:hover {
+  text-decoration: underline;
+  color: #e6d87f;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #bfa94f;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.edit-btn {
+  color: #bfa94f;
+}
+
+.delete-btn {
+  color: #cc6666;
+}
+
+.pomodoro-timer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.timer-display {
+  font-family: monospace;
+  font-size: 28px;
+  font-weight: bold;
+  min-width: 80px;
+  text-align: center;
+  transition: color 0.3s ease;
+  color: #bfa94f;
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #d4c96f;
+}

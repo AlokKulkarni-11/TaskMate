@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TaskMate</title>
+  <link href="popup.css" rel="stylesheet" />
+</head>
+<body class="light-theme">
+  <div class="container">
+    <header class="header">
+      <h1 class="title">TaskMate</h1>
+      <button id="theme-toggle" aria-label="Toggle Theme" class="theme-toggle-btn">🌙</button>
+    </header>
+
+    <section id="task-input-section" class="section">
+      <form id="task-form" class="task-form">
+        <input type="text" id="task-title" placeholder="Task Title" required class="input-text" />
+        <textarea id="task-desc" placeholder="Description" rows="2" class="input-textarea"></textarea>
+        <div class="input-row">
+          <input type="date" id="task-due-date" class="input-date" />
+          <select id="task-priority" class="input-select">
+            <option value="low">Low Priority</option>
+            <option value="medium" selected>Medium Priority</option>
+            <option value="high">High Priority</option>
+          </select>
+        </div>
+        <input type="text" id="task-tags" placeholder="Tags (comma separated)" class="input-text" />
+        <button type="submit" class="btn btn-primary">Add Task</button>
+      </form>
+    </section>
+
+    <section id="filters-section" class="section">
+      <div class="input-row">
+        <select id="filter-sort" class="input-select">
+          <option value="dueDate">Sort by Due Date</option>
+          <option value="priority">Sort by Priority</option>
+          <option value="tags">Sort by Tags</option>
+        </select>
+        <select id="filter-status" class="input-select">
+          <option value="all">All Tasks</option>
+          <option value="completed">Completed</option>
+          <option value="pending" selected>Pending</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="task-list-section" class="section task-list-section">
+      <ul id="task-list" class="task-list"></ul>
+    </section>
+
+    <section id="pomodoro-section" class="section">
+      <h2 class="section-title">Pomodoro Timer</h2>
+      <div id="pomodoro-timer" class="pomodoro-timer">
+        <div id="timer-display" class="timer-display">25:00</div>
+        <button id="pomodoro-start" class="btn btn-success">Start</button>
+        <button id="pomodoro-reset" class="btn btn-danger">Reset</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
